@@ -6,11 +6,10 @@ import ar.edu.unju.escmi.tp8.model.Empresa;
 
 public interface IEmpresaService {
 
-	void guardarEmpresa(Empresa empresa);
-	List<Empresa> obtenerEmpresas();
-	void modificarEmpresa(Empresa empresa);
-	void eliminarEmpresa(Long id);
-	Empresa buscarEmpresaId(Long id);
-	Empresa getEmpresa();
-
+    void guardarEmpresa(Empresa empresa);
+    void eliminarEmpresa(Long id);
+    void modificarEmpresa(Empresa empresa);
+    List<Empresa> obtenerEmpresas();
+    Empresa buscarEmpresaId(Long id);
+    Empresa getEmpresa();
 }
