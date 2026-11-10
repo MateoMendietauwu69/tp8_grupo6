@@ -25,7 +25,7 @@ public class EmpresaServiceImpl implements IEmpresaService {
     public void modificarEmpresa(Empresa empresaModificada) {
         for (int i = 0; i < CollectionEmpresa.empresas.size(); i++) {
             Empresa e = CollectionEmpresa.empresas.get(i);
-            if (e.getId().equals(empresaModificada.getId())) {
+            if (e.getId() == empresaModificada.getId()) {
                 CollectionEmpresa.empresas.set(i, empresaModificada);
                 break;
             }
@@ -33,14 +33,14 @@ public class EmpresaServiceImpl implements IEmpresaService {
     }
 
     @Override
-    public void eliminarEmpresa(Long id) {
-        CollectionEmpresa.empresas.removeIf(e -> e.getId().equals(id));
+    public void eliminarEmpresa(int id) {
+        CollectionEmpresa.empresas.removeIf(e -> e.getId() == id);
     }
 
     @Override
-    public Empresa buscarEmpresaId(Long id) {
+    public Empresa buscarEmpresaId(int id) {
         return CollectionEmpresa.empresas.stream()
-                .filter(e -> e.getId().equals(id))
+                .filter(e -> e.getId() == id)
                 .findFirst()
                 .orElse(null);
     }

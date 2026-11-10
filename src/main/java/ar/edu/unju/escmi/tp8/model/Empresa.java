@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Empresa {
     
-    private Long id;
+    private int id;
     private String nombre;
     private int cantidadEmpleados;
     private String telefono;
@@ -15,7 +15,7 @@ public class Empresa {
         // TODO Auto-generated constructor stub
     }
 
-    public Empresa(Long id, String nombre, int cantidadEmpleados, String telefono, String direccion) {
+    public Empresa(int id, String nombre, int cantidadEmpleados, String telefono, String direccion) {
         super();
         this.id = id;
         this.nombre = nombre;
@@ -24,11 +24,11 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
