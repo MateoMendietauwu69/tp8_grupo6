@@ -30,7 +30,7 @@ public class EmpresaController {
 	}
 
 	@GetMapping("/{id}")
-	public Empresa getEmpresaById(@PathVariable Long id) {
+	public Empresa getEmpresaById(@PathVariable int id) {
 		return empresaService.buscarEmpresaId(id);
 	}
 
@@ -45,7 +45,7 @@ public class EmpresaController {
 	}
 
 	@DeleteMapping("/{id}")
-	public void deleteEmpresa(@PathVariable Long id) {
+	public void deleteEmpresa(@PathVariable int id) {
 		empresaService.eliminarEmpresa(id);
 	}
 
